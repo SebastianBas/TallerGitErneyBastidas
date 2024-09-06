@@ -22,3 +22,16 @@ function numeroALetrasEs(num) {
     }
 }
 
+function traducirNumero(idioma) {
+    const numero = parseInt(document.getElementById('numero').value);
+    let resultado;
+
+    if (idioma === 'es') {
+        resultado = numeroALetrasEs(numero);
+    }
+
+    document.getElementById('modalResultado').innerText = resultado;
+    
+    var modal = new bootstrap.Modal(document.getElementById('resultadoModal'));
+    modal.show();
+}
